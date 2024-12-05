@@ -1,2 +1,2 @@
-# metal-search
+# Metal - Search
 WPF-Application using the Metal-API (Encyclopaedia Metallum)
