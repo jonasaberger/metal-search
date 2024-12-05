@@ -1,0 +1,15 @@
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\bin\Debug\net8.0\MetalSearch_Backend.exe
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\bin\Debug\net8.0\MetalSearch_Backend.deps.json
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\bin\Debug\net8.0\MetalSearch_Backend.runtimeconfig.json
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\bin\Debug\net8.0\MetalSearch_Backend.dll
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\bin\Debug\net8.0\MetalSearch_Backend.pdb
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.AssemblyInfoInputs.cache
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.AssemblyInfo.cs
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.csproj.CoreCompileInputs.cache
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.sourcelink.json
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.dll
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\refint\MetalSearch_Backend.dll
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.pdb
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\MetalSearch_Backend.genruntimeconfig.cache
+C:\gitRepos\metal-search\MetalSearch\MetalSearch_Backend\obj\Debug\net8.0\ref\MetalSearch_Backend.dll

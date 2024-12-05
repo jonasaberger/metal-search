@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MetalSearch_Backend/1.0.0": {
+        "runtime": {
+          "MetalSearch_Backend.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MetalSearch_Backend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
