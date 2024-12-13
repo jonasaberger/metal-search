@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox x:Name="TextBox_Input" HorizontalAlignment="Center" Margin="0,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="26"/>
+        <Button Content="Submit" HorizontalAlignment="Center" Margin="0,294,0,0" VerticalAlignment="Top" Width="106" Click="SearchButton_Click"/>
+        <Label x:Name="Label_Output" Content="OUTPUT" HorizontalAlignment="Center" VerticalAlignment="Top" Height="187" Width="212" Margin="0,10,0,0"/>
     </Grid>
 </Window>

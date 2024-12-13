@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetalSearch_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f257e8815ee6fa4cf95a7d21680748f817d59ea2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+728fbd5b7a02edc08daf4dce6249611313bf8505")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetalSearch_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetalSearch_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
