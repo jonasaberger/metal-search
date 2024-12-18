@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\gitRepos\\metal-search\\MetalSearch\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|c:\\gitrepos\\metal-search\\metalsearch\\metalsearch_application\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|solutionrelative:metalsearch_application\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|c:\\gitrepos\\metal-search\\metalsearch\\metalsearch_application\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|solutionrelative:metalsearch_application\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|c:\\gitrepos\\metal-search\\metalsearch\\metalsearch_application\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DCC869CE-CB03-447F-8DAF-B9ADABBE4B52}|MetalSearch_Application\\MetalSearch_Application.csproj|solutionrelative:metalsearch_application\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,20 +21,25 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\gitRepos\\metal-search\\MetalSearch\\MetalSearch_Application\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MetalSearch_Application\\MainWindow.xaml.cs",
               "ToolTip": "C:\\gitRepos\\metal-search\\MetalSearch\\MetalSearch_Application\\MainWindow.xaml.cs",
               "RelativeToolTip": "MetalSearch_Application\\MainWindow.xaml.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAIkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T10:43:53.6Z"
+              "WhenOpened": "2024-12-13T10:43:53.6Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\gitRepos\\metal-search\\MetalSearch\\MetalSearch_Application\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MetalSearch_Application\\MainWindow.xaml",

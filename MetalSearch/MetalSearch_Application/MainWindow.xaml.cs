@@ -35,38 +35,25 @@ namespace MetalSearch_Application
 
         public async void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            string input = TextBox_Input.Text;
 
             // TODO Verify Input from the Textfield
 
-            
-            
-
-            BandSearch(input);
-        }
 
 
-        public async void BandSearch(string input)
-        {
-            string fString = string.Empty;
             try
             {
-                _bands = await GetBand("/search/bands/name/" + input);
+                _bands = await GetBand_Preview("/search/bands/name/" + TextBox_Input.Text);
                 if (_bands.Count != 0)
                 {
                     ListBox_Output.Items.Clear();
-
                     foreach (BandModel_Preview band in _bands)
-                    {
                         ListBox_Output.Items.Add(band.Name + " - " + band.Genre);
-                    }
+
                 }
-                else
+                else // No Bands were found
                 {
-                    // No Bands were found
                     ListBox_Output.Items.Add("No bands were found!");
                 }
-
             }
             catch (Exception ex)
             {
@@ -74,8 +61,8 @@ namespace MetalSearch_Application
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
-        private async Task<List<BandModel_Preview>?> GetBand(string path)
 
+        private async Task<List<BandModel_Preview>?> GetBand_Preview(string path)
         {
             try
             {
@@ -102,10 +89,59 @@ namespace MetalSearch_Application
             return null;
         }
 
-        private void ListBox_Output_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+
+        private async Task<BandModel_Advanced> GetBand_Advanced(string path)
+        {
+            try
+            {
+                // First, initiate the HTTP request
+                HttpResponseMessage responseMessage = await _client.GetAsync(path);
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    // Deserialize the response as a list of BandModel, using the same cancellation token
+                    return await responseMessage.Content.ReadFromJsonAsync<BandModel_Advanced>();
+                }
+                else
+                {
+                    Console.WriteLine($"Request failed with status code: {responseMessage.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception during GetBand: {ex.Message}");
+            }
+
+            return null;
+        }
+
+
+
+
+
+        private async void ListBox_Output_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             BandModel_Preview selectedBand = _bands[((ListBox)sender).SelectedIndex];
             Console.WriteLine(selectedBand.Name);
+
+
+            try
+            {
+                BandModel_Advanced band = await GetBand_Advanced("/bands/" + selectedBand.ID);
+                
+                Console.WriteLine(band.Albums.Count);
+                foreach (var album in band.Albums)
+                {
+
+                    Console.WriteLine(album.Name);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log error and provide user feedback
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
     }
 
