@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
 
 namespace MetalSearch_Application
@@ -12,6 +13,10 @@ namespace MetalSearch_Application
     public partial class MainWindow : Window
     {
         private readonly HttpClient _client;
+
+        private const int TIMEOUT = 5;
+
+        private List<BandModel_Preview> _bands;
 
         public MainWindow()
         {
@@ -43,55 +48,65 @@ namespace MetalSearch_Application
 
         public async void BandSearch(string input)
         {
+            string fString = string.Empty;
             try
             {
-                List<BandModel> ?bands = await GetBand("/search/bands/name/" + input);
-                if (bands != null)
+                _bands = await GetBand("/search/bands/name/" + input);
+                if (_bands.Count != 0)
                 {
-                    foreach (BandModel band in bands)
+                    ListBox_Output.Items.Clear();
+
+                    foreach (BandModel_Preview band in _bands)
                     {
-                        Label_Output.Content = band.Name + "\n";
-                        Label_Output.Content += band.Genre;
+                        ListBox_Output.Items.Add(band.Name + " - " + band.Genre);
                     }
                 }
                 else
                 {
-                    Label_Output.Content = "No band information found.";
+                    // No Bands were found
+                    ListBox_Output.Items.Add("No bands were found!");
                 }
+
             }
             catch (Exception ex)
             {
                 // Log error and provide user feedback
                 Console.WriteLine($"Error: {ex.Message}");
-                Label_Output.Content = "An error occurred while fetching band information.";
             }
         }
+        private async Task<List<BandModel_Preview>?> GetBand(string path)
 
-        private async Task<List<BandModel>?> GetBand(string path)
         {
             try
             {
-                HttpResponseMessage responseMessage = await _client.GetAsync(path);
-                
-                if (responseMessage.IsSuccessStatusCode)
-                {
+                    // First, initiate the HTTP request
+                    HttpResponseMessage responseMessage = await _client.GetAsync(path);
 
-                    Console.Write(responseMessage.Content);
-                    // Deserialize the response as a list of BandModel
-                    return await responseMessage.Content.ReadFromJsonAsync<List<BandModel>>();
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        Console.Write(responseMessage.StatusCode);
+
+                        // Deserialize the response as a list of BandModel, using the same cancellation token
+                        return await responseMessage.Content.ReadFromJsonAsync<List<BandModel_Preview>>();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Request failed with status code: {responseMessage.StatusCode}");
+                    }
                 }
-                else
-                {
-                    Console.WriteLine($"Request failed with status code: {responseMessage.StatusCode}");
-                }
-            }
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception during GetBand: {ex.Message}");
             }
+
             return null;
         }
 
+        private void ListBox_Output_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            BandModel_Preview selectedBand = _bands[((ListBox)sender).SelectedIndex];
+            Console.WriteLine(selectedBand.Name);
+        }
     }
 
 }
